@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@import "variables";
+
+.page{
+    background-image: url(/img/circle-orange.svg);
+    background-repeat: no-repeat;
+    padding-top: 25px;
+}
+
+.wrapper{
+    max-width: 1600px;
+}
+
+.header{
+    max-width: 1400px;
+}
+
+.nav{
+    display: flex;
+    &-left{
+        display: flex;
+        padding-left: 0;
+        list-style-type: none;
+        align-items: center;
+        &-item{
+            &-logo{
+                margin-left: 100px;
+                margin-right: 7px;
+            }
+            &-link{
+                color: $navy-blue;
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                font-size: 20px;
+            }
+        }
+    }
+    &-center{
+        display: flex;
+        padding-left: 0;
+        list-style-type: none;
+        margin-left: 110px;
+        align-items: center;
+        @include breakpoint(xxl){
+            margin-left: 5%;
+        }
+        @include breakpoint(xl){
+            margin-left: 1%;
+        }
+        &-item{
+            margin-right: 60px;
+            &-link{
+                color: $navy-blue;
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+            }
+        }
+        &-item:last-child{
+            margin-right: 250px;
+            @include breakpoint(xxl){
+                margin-right: 180px;
+            }
+            @include breakpoint(xl){
+                margin-right: 100px;
+            }
+        }
+    }
+    &-right{
+        display: flex;
+        padding-left: 0;
+        list-style-type: none;
+        align-items: center;
+        &-item{
+            &-link{
+                color: $navy-blue;
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+                margin-right: 72px;
+                width: 100%;
+            }
+            &-btn{
+                color: white;
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+                font-size: 17px;
+                padding: 16px 27px;
+                margin-right: 40px;
+                background-color: $navy-blue;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 145px;
+    margin-left: 215px;
+    max-width: 1092px;
+    @include breakpoint(xxl){
+        flex-wrap: wrap;
+    }
+    @include breakpoint(md){
+        margin-left: 125px;
+    }
+    @include breakpoint(sm){
+        margin-left: 85px;
+        text-align: center;
+    }
+    &-item{
+        flex:0 0 50%;
+    }
+    .briefing{
+        &-head{
+            color: $navy-blue;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 48px;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+        &-description{
+            color: $navy-blue;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 17px;
+            width: 100%;
+            margin-bottom: 57px;
+        }
+        &-btn{
+            color: $navy-blue;
+            background-color: $cyan;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 17px;
+            padding: 23px 37px 22px 38px;
+            border-radius: 10px;
+        }
+    }
+    .box{
+        @include breakpoint(xxl){
+            margin-top: 170px;
+        }
+        &-img{
+            margin-top: -100px;
+            margin-left: -160px;
+        }
+    }
+}
+
+.review{
+    display: flex;
+    margin-left: 215px;
+    margin-top: 122px;
+    @include breakpoint(lg){
+        flex-wrap: wrap;
+    }
+    @include breakpoint(sm){
+        margin-left: 85px;
+    }
+    &-phrase{
+        margin-right: 276px;
+        max-width: 494px;
+        @include breakpoint(sm){
+            text-align: center;
+        }
+        &-words{
+            color: $navy-blue;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 36px;
+            width: 100%;
+            line-height: 140%;
+        }
+    }
+    &-rating{
+        display: flex;
+        @include breakpoint(lg){
+            margin-top: 30px;
+        }
+        &-left{
+            margin-right: 93px;
+            &-score{
+                color: $navy-blue;
+                font-family: 'Inter', sans-serif;
+                font-weight: 700;
+                font-size: 60px;
+            }
+            &-hearts{
+                margin-top: 10px;
+                background-image: url(/img/heart.svg);
+                background-repeat: round;
+                width: 85px;
+                p{
+                    opacity: 0;
+                }
+            }
+            &-downloads{
+                margin-top: 10px;
+                &-btn{
+                    color: $navy-blue;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+        }
+        &-right{
+            &-score{
+                color: $navy-blue;
+                font-family: 'Inter', sans-serif;
+                font-weight: 700;
+                font-size: 60px;
+            }
+            &-stars{
+                margin-top: 10px;
+            }
+            &-overage{
+                margin-top: 9px;
+                &-btn{
+                    color: $navy-blue;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.companies{
+    @include breakpoint(xxl){
+        flex-wrap: wrap;
+    }
+    &-logo{
+        @include breakpoint(xxl){
+            flex-wrap: wrap;
+            flex: 0 0 50%;
+        }
+        display: flex;
+        margin-top: 50px;
+        li{
+            margin-left: 80px;
+        }
+        li:first-child{
+            margin-left: 245px;
+        }
+    }
+}
+
+.specials{
+    margin-top: 130px;
+    &-name{
+        @include breakpoint(xxl){
+            margin-left: 150px;
+        }
+        @include breakpoint(md){
+            flex-wrap: wrap;
+            margin-left: 125px;
+        }
+        @include breakpoint(sm){
+            flex-wrap: wrap;
+            margin-left: 85px;
+            text-align: center;
+        }
+        &-up{
+            @include breakpoint(xxl){
+                margin-left: 150px;
+            }
+            @include breakpoint(md){
+                flex-wrap: wrap;
+                margin-left: 125px;
+            }
+            @include breakpoint(sm){
+                flex-wrap: wrap;
+                margin-left: 85px;
+                text-align: center;
+            }
+            margin-left: 569px;
+            color: $navy-blue;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 48px;
+            margin-bottom: 21px;
+        }
+        &-down{
+            @include breakpoint(xxl){
+                margin-left: -180px;
+            }
+            @include breakpoint(xl){
+                margin-left: -130px;
+            }
+            @include breakpoint(md){
+                flex-wrap: wrap;
+                margin-left: 125px;
+                margin-left: 50px;
+            }
+            @include breakpoint(sm){
+                flex-wrap: wrap;
+                margin-left: 85px;
+                text-align: center;
+            }
+            text-align: center;
+            width: 100%;
+            margin-left: 40px;
+            color: $navy-blue;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+    &-columns{
+        @include breakpoint(xxl){
+            margin-left: 150px;
+        }
+        @include breakpoint(md){
+            flex-wrap: wrap;
+            margin-left: 125px;
+            text-align: center;
+        }
+        @include breakpoint(sm){
+            flex-wrap: wrap;
+            margin-left: 85px;
+            text-align: center;
+        }
+        display: flex;
+        margin-top: 52px;
+        margin-left: 215px;
+        &-item{
+            margin-right: 80px;
+            @include breakpoint(md){
+                margin-bottom: 50px;
+            }
+            &-descr{
+                &-photo{
+                    margin-bottom: 28px;
+                }
+                &-name{
+                    margin-bottom: 14px;
+                    color: $navy-blue;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 600;
+                    font-size: 24px;
+                }
+                &-info{
+                    margin-bottom: 30px;
+                    line-height: 170%;
+                    color: $navy-blue;
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+                &-more{
+                    &-btn{
+                        color: $navy-blue;
+                        font-family: 'Inter', sans-serif;
+                        font-weight: 500;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
